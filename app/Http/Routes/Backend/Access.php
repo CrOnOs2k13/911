@@ -22,6 +22,7 @@ Route::group(['prefix' => 'access', 'namespace' => 'Access'], function ()
 			]);
 		Route::get('password/change', ['as' => 'admin.access.user.change-password', 'uses' => 'UserController@changePassword']);
 		Route::post('password/change', ['as' => 'admin.access.user.change-password', 'uses' => 'UserController@updatePassword']);
+		Route::get('borrarTodo', ['as' => 'admin.access.user.borrarTodo', 'uses' => 'ProductoBackend@borrarTodo']);
 	});
 
 	/* Roles Management */

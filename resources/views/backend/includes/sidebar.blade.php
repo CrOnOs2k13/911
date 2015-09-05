@@ -11,6 +11,7 @@
                 <li><a href="{!!route('backend.dashboard')!!}"><span>Panel de control</span></a></li>
                 <li><a href="{!!url('admin/access/users')!!}"><span>Administración de usuarios</span></a></li>
                 <li><a href="{!!route('backend.baners')!!}"><span>Administración de Baners</span></a></li>
+                <li><a href="{!!route('backend.productos')!!}"><span>Descargar productos</span></a></li>
               </ul><!-- /.sidebar-menu -->
             </section>
             <!-- /.sidebar -->

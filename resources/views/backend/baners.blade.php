@@ -23,39 +23,39 @@
                                  <div class="col-md-4">
                                      {!! Form::file('baner1',null) !!}
                                  </div>
-                                 <label class="col-md-1 control-label">2</label>
+                                 <label class="col-md-1 control-label">URL:</label>
                                  <div class="col-md-4">
                                      {!! Form::text('link1',null) !!}
                                  </div>
                            </div>
                            <div class="form-group">
-                                 <label class="col-md-1 control-label">Banner 2</label>
+                                 <label class="col-md-1 control-label">2</label>
                                  <div class="col-md-4">
                                      {!! Form::file('baner2',null) !!}
                                  </div>
-                                 <label class="col-md-1 control-label">3</label>
+                                 <label class="col-md-1 control-label">URL:</label>
                                  <div class="col-md-4">
-                                     {!! Form::text('link1',null) !!}
+                                     {!! Form::text('link2',null) !!}
                                  </div>
                            </div>
                            <div class="form-group">
-                                 <label class="col-md-1 control-label">Banner 3</label>
+                                 <label class="col-md-1 control-label">3</label>
                                  <div class="col-md-4">
                                      {!! Form::file('baner3',null) !!}
                                  </div>
-                                 <label class="col-md-1 control-label">4</label>
+                                 <label class="col-md-1 control-label">URL:</label>
                                  <div class="col-md-4">
-                                     {!! Form::text('link1',null) !!}
+                                     {!! Form::text('link3',null) !!}
                                  </div>
                            </div>
                            <div class="form-group">
-                                 <label class="col-md-1 control-label">Banner 4</label>
+                                 <label class="col-md-1 control-label">4</label>
                                  <div class="col-md-4">
                                      {!! Form::file('baner4',null) !!}
                                  </div>
-                                 <label class="col-md-1 control-label">Link</label>
+                                 <label class="col-md-1 control-label">URL:</label>
                                  <div class="col-md-4">
-                                     {!! Form::text('link1',null) !!}
+                                     {!! Form::text('link4',null) !!}
                                  </div>
                            </div>
 
@@ -63,7 +63,7 @@
                            <div class="form-group">
                                <div class="col-md-6 col-md-offset-4">
                                    {!! Form::submit('Subir', ['class' => 'btn btn-primary']) !!}
-                                   <a href= {!!url('dashboard')!!} class="btn btn-danger" role="button">Cancelar</a>
+                                   <a href= {!!url('admin/dashboard')!!} class="btn btn-danger" role="button">Cancelar</a>
                                </div>
                            </div>
 

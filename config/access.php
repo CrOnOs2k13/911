@@ -46,7 +46,7 @@ return array(
 		/*
 		 * Administration tables
 		 */
-		'default_per_page' => 25,
+		'default_per_page' => 2,
 
 		/*
 		 * The role the user is assigned to when they sign up from the frontend

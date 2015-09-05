@@ -163,4 +163,30 @@
         <div class="clearfix"></div>
 
     {!! Form::close() !!}
+    {!! Form::open( ['route' => ['admin.access.users.update', $user->id], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'get']) !!}
+    <div class="form-group">
+      {!!$borrar=0!!}
+        <label class="col-lg-2 control-label">Borrar todos los productos</label>
+        <div class="col-lg-1">
+            <div class="sw-green borrar-switch">
+                <div class="onoffswitch">
+                    <input type="checkbox" value="1" name="borrar" class="toggleBtn onoffswitch-checkbox" id="borrar-active" >
+                    <label for="borrar-active" class="onoffswitch-label">
+                        <div class="onoffswitch-inner"></div>
+                        <div class="onoffswitch-switch"></div>
+                    </label>
+                </div>
+            </div><!--green checkbox-->
+        </div>
+    </div><!--form control-->
+
+    <div class="pull-left">
+        <a href="{{route('admin.access.users.index')}}" class="btn btn-danger">Cancelar</a>
+    </div>
+
+    <div class="pull-right">
+        <input type="submit" class="btn btn-success" value="Borrar" />
+    </div>
+    <div class="clearfix"></div>
+    {!! Form::close() !!}
 @stop

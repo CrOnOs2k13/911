@@ -36,6 +36,7 @@ Route::group(['namespace' => 'Backend'], function ()
 		], function ()
 		{
 			Route::get('dashboard', ['as' => 'backend.dashboard', 'uses' => 'DashboardController@index']);
+			Route::get('productos', ['as' => 'backend.productos', 'uses' => 'ProductoBackend@descargarTodo']);
 			Route::get('baners', ['as' => 'backend.baners', 'uses' => 'DashboardController@baners']);
 			Route::post('guardar_baners', ['as' => 'backend.guardar_baners', 'uses' => 'DashboardController@guardar_baners']);
 			require_once(__DIR__ . "/Routes/Backend/Access.php");

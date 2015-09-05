@@ -2,14 +2,14 @@
 		<div class="container-fluid">
 			<div class="navbar-header">
 			<a class="navbar-brand" style='padding-top:10px;' href={!!route('home')!!}> <img class=''  src="{{ asset('img/baner-logo.jpg')}}" alt="911arq.com"/> </a>
-			
+
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle Navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				
+
           <p class="navbar-text collapsed " style ='float:right'>Buscar </p>
 			</div>
 
@@ -18,7 +18,7 @@
 					<li>{!! link_to('/', 'Inicio') !!}</li>
 				</ul> --}}
         <!-- Formulario de busqueda -->
-        {!!Form::open(['method' => 'get', 'url' => url('busqueda'), 'class' =>'navbar-form navbar-left ancho', 'role'=>'search']) !!}
+        {!!Form::open(['method' => 'get', 'route' => ['busqueda', 'resultado'], 'class' =>'navbar-form navbar-left ancho', 'role'=>'search']) !!}
         <div class="form-group">
           {!!Form::text('Buscar','',['class'=>'form-control','name'=>'busqueda','placeholder'=>'Por Description  o clave','style'=>'color:rgb(153,0,0)']) !!}
         </div>

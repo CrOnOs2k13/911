@@ -212,7 +212,7 @@ class EloquentUserRepository implements UserContract {
 
 		return \Mail::send('emails.confirm', ['token' => $user->confirmation_code], function($message) use ($user)
 		{
-			$message->to($user->email, $user->name)->subject(app_name().': Confirm your account!');
+			$message->to($user->email, $user->name)->subject(app_name().': Confirma tu cuenta!');
 		});
 	}
 }

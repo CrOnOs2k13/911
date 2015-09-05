@@ -48,6 +48,7 @@
       </tbody>
         <tbody>
           <?php $contador = 1; ?>
+        
           @foreach($resultados as $p )
           <tr data-toggle="collapse" data-target={{"#acordeonpro" . $contador}} class="clickable mano">
             <td>{!!str_limit($p->producto, $limit = 20, $end = '...')!!}</td>
@@ -70,7 +71,7 @@
         </tr>
         <?php $contador = $contador+1; ?>
           @endforeach
-        {!!$resultados->render()!!}
+        {{-- {!!$resultados->render()!!} --}}
       </tbody>
     </table>
   </div>

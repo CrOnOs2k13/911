@@ -57,7 +57,9 @@
 			<div class="panel panel-warning">
 				{{-- <div class="panel-heading"><i class="fa fa-home"></i> Novedades</div> --}}
 				<div class="panel-body">
-					<img src="{{ asset('img/baner.jpg')}}" alt="911arq.com" class='img-responsive .center-block' />
+					<a  target="_blank" href="http://{{$link}}">
+					<img src="{!! asset('img/baner'.$baner.'.jpg')!!}" alt="911arq.com" class='img-responsive center-block' />
+					</a>
 				</div>
 			</div><!-- panel -->
 
@@ -114,6 +116,6 @@
 				</div><!-- col-md-10 -->
 
 
-	
+
 	</div><!-- row -->
 @endsection

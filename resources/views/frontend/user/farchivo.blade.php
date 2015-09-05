@@ -24,11 +24,11 @@
 								<li>categoria</li>
 							</ul>
 							</li>
-						<li>Guardar el archivo como [nombre].cvs </li>
-						<li><h4 class='bg-danger'>Recuerda que no esta permitido el uso de la coma <mark>","</mark> o se produciran errores al procesar el archivo, te recomendamos que uses otro separador como el guion <mark>"-"</mark></h4></li>
+						<li>Guardar el archivo como Libro de Exel 97-2003 [nombre].xls </li>
+						<li><h4 class='bg-danger'>el numero maximo de articulos para un archivo es de 5000, puedes usar tantos como sean necesarios, y recuerda no dejar filas en blanco.</h4></li>
 					</ol>
 					<p>
-						Puedes descargar un archivo de ejemplo desde <a href="{{URL::to( 'download/upload.csv')}}">aqui</a>
+						Puedes descargar un archivo de ejemplo desde <a href="{{URL::to( 'download/upload.xls')}}">aqui</a>
 					</p>
 
                        {!! Form::open( ['route' => 'guardararchivo', 'class' => 'form-horizontal', 'method' => 'POST','novalidate' => 'novalidate', 'files' => true]) !!}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,26 +40,91 @@
               <div class="col-lg-4 col-lg-push-4 col-md-4 col-md-push-4 col-sm-4 col-sm-push-4 col-xs-12">
                 <div class="text-center">
                   <p>911arq.com derechos reservados 2015 <br>
-                    <a href="{{route('privacidad')}}">Terminos de uso</a> </p>
+                    <a target="_blank" href="{{route('privacidad')}}">Terminos de uso</a> </p>
+
 
                   </div>
                 </div>
                 <div class="col-sm-4 col-sm-pull-4">
-                  <a href="#">otra información de contacto</a>
+                  <a data-toggle="modal" data-target="#myModal" href='#'>  <img src="{!! asset('img/contacto.jpg')!!}" alt="ventas" class="img-responsive center-block"/></a>
                   <br>
                   <br>
                 </div>
                 <div class="col-sm-4">
                   <span class="pull-right">
-                        <a href="tel:+524431604300" data-toggle="tooltip" data-placement="top" title="Llamanos"><img src={{asset('img/whatsapp.jpg')}}></a>
-                        <a href="https://plus.google.com/u/0/107724034982103510727/posts" homepage_panel" data-toggle="tooltip" data-placement="top" title="Visitanos en Google +"><img src={{asset('img/google.jpg')}}></a>
-                        <a href="https://www.facebook.com/911arq?ref=aymt_homepage_panel" data-toggle="tooltip" data-placement="top" title="Visitanos en Facebook"><img src={{asset('img/facebook.jpg')}}></a>
-                        <a href="https://twitter.com/911arqweb" homepage_panel" data-toggle="tooltip" data-placement="top" title="Unete a la comunidad en Twitter"> <img src={{asset('img/twitter.jpg')}}></a>
-                        <a href="https://mx.linkedin.com/pub/novecientos-once-arq/102/296/7a1" homepage_panel" data-toggle="tooltip" data-placement="top" title="LinkedIn"><img src={{asset('img/linkedin.jpg')}}></a>
+                        <a href="tel:+524431604300" data-toggle="tooltip" data-placement="top" title="Llamanos" target="_blank">&nbsp <img src={{asset('img/whatsapp.jpg')}}></a>
+                        <a href="https://plus.google.com/u/0/107724034982103510727/posts" homepage_panel" data-toggle="tooltip" data-placement="top" title="Visitanos en Google +" target="_blank">&nbsp <img src={{asset('img/google.jpg')}}></a>
+                        <a href="https://www.facebook.com/911arq?ref=aymt_homepage_panel" data-toggle="tooltip" data-placement="top" title="Visitanos en Facebook" target="_blank">&nbsp <img src={{asset('img/facebook.jpg')}}></a>
+                        <a href="https://twitter.com/911arqweb" homepage_panel" data-toggle="tooltip" data-placement="top" title="Unete a la comunidad en Twitter" target="_blank">&nbsp <img src={{asset('img/twitter.jpg')}}></a>
+                        <a href="https://mx.linkedin.com/pub/novecientos-once-arq/102/296/7a1" homepage_panel " data-toggle="tooltip" data-placement="top" title="LinkedIn" target="_blank">&nbsp <img src={{asset('img/linkedin.jpg')}}></a>
 
                   </span>
                 </div>
               </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Contacto</h4>
+      </div>
+      <div class="modal-body">
+        {!! Form::open( ['route' => ['admin.access.users.update'], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post']) !!}
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Nombre</label>
+            <div class="col-lg-10">
+                {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder' => 'Nombre']) !!}
+            </div>
+        </div><!--form control-->
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Empresa</label>
+            <div class="col-lg-10">
+                {!! Form::text('empresa', null, ['class' => 'form-control', 'placeholder' => 'Empresa']) !!}
+            </div>
+        </div><!--form control-->
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Telefono</label>
+            <div class="col-lg-10">
+                {!! Form::text('telefono', null, ['class' => 'form-control', 'placeholder' => 'Telefono']) !!}
+            </div>
+        </div><!--form control-->
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Movil:</label>
+            <div class="col-lg-10">
+                {!! Form::text('movil', null, ['class' => 'form-control', 'placeholder' => 'Movil']) !!}
+            </div>
+        </div><!--form control-->
+        <div class="form-group">
+            <label class="col-lg-2 control-label">E-mail</label>
+            <div class="col-lg-10">
+                {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'E-mail']) !!}
+            </div>
+        </div><!--form control-->
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Mensaje</label>
+            <div class="col-lg-10">
+                {!! Form::textarea('mensaje', null, ['class' => 'form-control', 'placeholder' => 'mensaje']) !!}
+            </div>
+        </div><!--form control-->
+      </div>
+      <div class="modal-footer">
+        <div class="pull-left">
+            <a href="{{route('admin.access.users.index')}}" class="btn btn-danger">Cancelar</a>
+        </div>
+
+        <div class="pull-right">
+            <input type="submit" class="btn btn-success" value="Enviar" />
+        </div>
+        <div class="clearfix"></div>
+        {!! Form::close() !!}
+      </div>
+    </div>
+  </div>
+</div>
             </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

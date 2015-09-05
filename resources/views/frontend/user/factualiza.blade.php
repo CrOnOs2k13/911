@@ -11,7 +11,7 @@
         <h2>Instrucciones</h2>
         <p>
           Para actualizar el precio de los productos es necesario contar con el codigo de cada uno de los productos que se quiere modificar.
-          Se usa un archivo de datos separados por comas. Para crear este archivio se puede usar Microsoft Exel siguiendo los siguintes pasos:
+          Se usa un archivo de datos separados por comas. Para crear este archivo se puede usar Microsoft Exel siguiendo los siguintes pasos:
         </p>
         <ol>
           <li>Crear un archivo nuevo en Exel</li>
@@ -21,10 +21,11 @@
               <li>precio</li>
             </ul>
             </li>
-          <li>Guardar el archivo como [nombre].cvs </li>
+            <li>Guardar el archivo como Libro de Exel 97-2003 [nombre].xls </li>
+            <li><h4 class='bg-danger'>el numero maximo de articulos para un archivo es de 5000, puedes usar tantos como sean necesarios, y recuerda no dejar filas en blanco.</h4></li>
         </ol>
         <p>
-          Puedes descargar un archivo de ejemplo desde <a href="{{URL::to( 'download/update.csv')}}">aqui</a>
+          Puedes descargar un archivo de ejemplo desde <a href="{{URL::to( 'download/update.xls')}}">aqui</a>
         </p>
 
                      {!! Form::open( ['route' => 'procesarUpdate', 'class' => 'form-horizontal', 'method' => 'POST','novalidate' => 'novalidate', 'files' => true]) !!}

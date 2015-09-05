@@ -14,7 +14,7 @@ Route::get('politica-privacidad', ['as' =>  'privacidad', 'uses' => 'FrontendCon
 // {
 //     return 'User '.$id;
 // });
-Route::get('busqueda', ['as' =>  'busqueda', 'uses'  =>  'Resultados@busqueda' ]);
+Route::get('busqueda/{res}/', ['as' =>  'busqueda', 'uses'  =>  'Resultados@busqueda' ]);
 Route::get('busqueda/descarga/{busqueda}', ['as' =>  'busqueda.descarga', 'uses'  =>  'Resultados@descargar' ]);
 
 

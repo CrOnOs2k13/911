@@ -2,6 +2,7 @@
 namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\User;
+use File;
 // use Illuminate\Http\Request;
 use App\Repositories\Frontend\Auth\AuthenticationContract;
 // use App\Exceptions\GeneralException;
@@ -104,10 +105,14 @@ public function guardar(Request $request){
       $ruta = base_path() . '/public/file/' ;
       $nombreArchivo = Input::file('productos')->getClientOriginalName();
       $archivo = Input::file('productos')->move( $ruta, $nombreArchivo);
-      $ex=Excel::load($ruta . $nombreArchivo, 'UTF-8', function($archivo2) {
-        $resultado = $archivo2->get();
+      $file=$ruta . $nombreArchivo;
+      $x=Excel::load($file, 'UTF-8');
+      //dd($x->take(100)->get());
+       //$ex=Excel::load($ruta . $nombreArchivo, 'UTF-8', function($archivo2) {
+      //  $resultado = $archivo2->get();
+      $resultado = $x->get();
         $duplicados = new productos;
-        dd($resultado);
+        //dd($resultado);
         foreach ($resultado as $key => $value) {
           if ($value->has('producto')) {
             if (! $duplicados->where('codigo',$value->__get('codigo') )
@@ -130,8 +135,8 @@ public function guardar(Request $request){
 
           }
         }
-        $archivo->delete();
-  });
+        File::delete($file);
+//  });
 
     if ($GLOBALS['er']) {
       return redirect()->route('productos')->withFlashDanger($GLOBALS['mensaje']. ' estos productos no fueron agregados.');
